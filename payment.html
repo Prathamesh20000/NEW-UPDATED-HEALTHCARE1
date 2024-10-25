@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="payment.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+
+    <h1>Complete Your Payment</h1>
+
+    <div class="payment-container">
+        <!-- Payment Form -->
+        <form id="payment-form">
+            <div class="form-group">
+                <label for="cardholder-name">Cardholder Name</label>
+                <input type="text" id="cardholder-name" name="cardholder-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="billing-address">Billing Address</label>
+                <input type="text" id="billing-address" name="billing-address" placeholder="123 Street, City" required>
+            </div>
+
+            <div class="form-group">
+                <button type="button" class="payment-button" id="pay-now">Pay Now - ₹99</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Razorpay payment integration
+        document.getElementById('pay-now').onclick = function(e) {
+            e.preventDefault();
+            
+            var options = {
+                "key": "YOUR_RAZORPAY_KEY", // Replace with your Razorpay key
+                "amount": "9900", // Amount is in paise (₹99 = 9900 paise)
+                "currency": "INR",
+                "name": "MediAssist",
+                "description": "Payment for Healthcare Service",
+                "image": "https://your-logo-url.com", // You can add a logo here
+                "handler": function (response) {
+                    // On successful payment
+                    alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
+                    window.location.href = "payment-success.html";
+                },
+                "prefill": {
+                    "name": document.getElementById('cardholder-name').value,
+                    "email": "customer@example.com", // You can get the email dynamically
+                    "contact": "9876543210" // Replace with customer phone number
+                },
+                "notes": {
+                    "address": document.getElementById('billing-address').value
+                },
+                "theme": {
+                    "color": "#1f8fc1"
+                }
+            };
+
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+        };
+    </script>
+
+</body>
+</html>

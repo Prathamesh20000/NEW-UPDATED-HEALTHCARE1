@@ -1,0 +1,211 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #1f8fc1;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ffea8a;
+}
+
+.cta-button, .subscription-button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover, .subscription-button:hover {
+    background-color: #ff4b3a;
+    transform: scale(1.05);
+}
+
+/* Subscription Icon Button */
+.subscription-button {
+    background-color: #ffc107; /* Bright yellow to stand out */
+    margin-left: 20px;
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+}
+
+.subscription-button:hover {
+    background-color: #e0a800;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(45deg, #1f8fc1, #00d4ff);
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #f4f7f6;
+}
+
+.hero .cta-button, .secondary-cta {
+    margin: 15px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero .cta-button {
+    background-color: #ff6f61;
+    box-shadow: 0 5px 15px rgba(255, 111, 97, 0.4);
+}
+
+.hero .cta-button:hover {
+    background-color: #ff4b3a;
+    transform: translateY(-5px);
+}
+
+.hero .secondary-cta {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero .secondary-cta:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1f8fc1;
+    padding: 30px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffea8a;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}

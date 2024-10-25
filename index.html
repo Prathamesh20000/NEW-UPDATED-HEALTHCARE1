@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Chatbot | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Logo styling */
+        .logo h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #ffffff; /* White color */
+            display: inline-block;
+            font-size: 1.8em;
+            margin: 0;
+        }
+
+        /* Medical symbol and text aligned without background */
+        .logo h1::before {
+            content: "⚕️"; /* Medical symbol */
+            font-size: 1.5em;
+            color: #ffffff; /* White color for symbol */
+            margin-right: 8px;
+            vertical-align: middle; /* Align symbol with text */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>MediAssist</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="profile.php" class="cta-button">Profile</a></li>
+                    <li><a href="logout.php" class="cta-button" onclick="confirmLogout()">Logout</a></li>
+                    <li><a href="subscription.html" class="subscription-button">Subscribe</a></li> <!-- Subscription Button -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to MediAssist</h1>
+            <p>Your virtual assistant for health-related queries.</p>
+            <a href="selection.html" class="cta-button">Start your chat</a>
+            <a href="learnmore.html" class="secondary-cta">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 HealthBot. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function confirmLogout() {
+            return confirm("Are you sure you want to log out?");
+        }
+    </script>
+</body>
+</html>

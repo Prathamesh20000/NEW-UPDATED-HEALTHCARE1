@@ -1,0 +1,154 @@
+/* CSS Styles for Learn More Page */
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #0077b6;
+    padding: 1em 0;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d0e8ff;
+}
+
+/* Learn More Section */
+.learn-more {
+    padding: 3em 0;
+    background-color: #e0f7ff;
+    text-align: center;
+}
+
+.learn-more h2 {
+    color: #0077b6;
+    font-size: 32px;
+    margin-bottom: 1em;
+}
+
+.learn-more p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+    color: #333;
+    margin-bottom: 2em;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2em;
+}
+
+.feature {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1.5em;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    color: #0077b6;
+    font-size: 24px;
+    margin-bottom: 0.5em;
+}
+
+.feature p {
+    color: #555;
+}
+
+/* Call to Action Section */
+.cta-section {
+    margin-top: 3em;
+    background-color: #0077b6;
+    color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.cta-section h3 {
+    font-size: 24px;
+    margin-bottom: 0.5em;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 1em;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #fff;
+    color: #0077b6;
+    padding: 0.75em 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #d0e8ff;
+    color: #005f89;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    margin-top: 2em;
+}
+
+footer p {
+    margin: 0.5em 0;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 0.5em;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #d0e8ff;
+}
